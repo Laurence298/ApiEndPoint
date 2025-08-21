@@ -27,7 +27,7 @@ class Api::BooksController < ApplicationController
     def set_book
       @book = Book.find(params[:id])
     rescue ActiveRecord::RecordNotFound
-        render json: { errors: [ "chapter not found" ] }, status: :bad_request
+      render json: { errors: [ "chapter not found" ] }, status: :bad_request
     end
     def book_params
       params.require(:book).permit(:book_name)

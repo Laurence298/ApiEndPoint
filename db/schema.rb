@@ -58,10 +58,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_20_221836) do
   create_table "chapters", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "books_id", null: false
+    t.integer "book_id", null: false
     t.string "chapter_name"
     t.text "content"
-    t.index ["books_id"], name: "index_chapters_on_books_id"
+    t.index ["book_id"], name: "index_chapters_on_book_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -72,5 +72,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_20_221836) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "chapters", "books", column: "books_id"
+  add_foreign_key "chapters", "books"
 end
