@@ -17,4 +17,12 @@ Rails.application.routes.draw do
       end
       resources :groups
   end
+
+  namespace :admin do
+    resources :users
+    resources :books do
+      resources :chapters
+    end
+  end
+end
 end
