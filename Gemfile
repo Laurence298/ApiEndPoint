@@ -63,5 +63,5 @@ group :test do
 end
 
 gem 'bcrypt', '~> 3.1.7'
-gem 'jwt', '~> 2.5'
+gem 'jwt', '~> 3.1'
 gem 'rack-cors'
